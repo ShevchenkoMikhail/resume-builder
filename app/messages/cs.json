@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Tvůrce životopisů",
+    "description": "Vytvářejte a stahujte profesionální životopisy"
+  },
+  "navigation": {
+    "home": "Hlavní stránka",
+    "dashboard": "Moje životopisy",
+    "donate": "Podpořte nás",
+    "signIn": "Přihlásit se",
+    "signOut": "Odhlásit se"
+  },
+  "auth": {
+    "signInTitle": "Přihlásit se do Tvůrce životopisů",
+    "signInDescription": "Přihlaste se pomocí svého účtu Google pro přístup k vytváření a úpravě životopisů.",
+    "signInWithGoogle": "Přihlásit se přes Google"
+  },
+  "resume": {
+    "sections": {
+      "personalInfo": "Osobní údaje",
+      "education": "Vzdělání",
+      "experience": "Pracovní zkušenosti",
+      "skills": "Dovednosti",
+      "languages": "Jazyky",
+      "interests": "Zájmy a koníčky"
+    },
+    "fields": {
+      "fullName": "Celé jméno",
+      "email": "Email",
+      "phone": "Telefon",
+      "address": "Adresa",
+      "photoUrl": "URL fotografie",
+      "profession": "Profese",
+      "summary": "Profesní shrnutí"
+    }
+  }
+}
