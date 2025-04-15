@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Resume Builder",
+    "description": "Create and download professional resumes"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "My Resumes",
+    "donate": "Support Us",
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "auth": {
+    "signInTitle": "Sign in to Resume Builder",
+    "signInDescription": "Sign in with your Google account to access resume creation and editing features.",
+    "signInWithGoogle": "Sign in with Google"
+  },
+  "resume": {
+    "sections": {
+      "personalInfo": "Personal Information",
+      "education": "Education",
+      "experience": "Work Experience",
+      "skills": "Skills",
+      "languages": "Languages",
+      "interests": "Interests & Hobbies"
+    },
+    "fields": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "photoUrl": "Photo URL",
+      "profession": "Profession",
+      "summary": "Professional Summary"
+    }
+  }
+}

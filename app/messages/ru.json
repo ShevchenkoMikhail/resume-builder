@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Конструктор резюме",
+    "description": "Создавайте и скачивайте профессиональные резюме"
+  },
+  "navigation": {
+    "home": "Главная",
+    "dashboard": "Мои резюме",
+    "donate": "Поддержать проект",
+    "signIn": "Войти",
+    "signOut": "Выйти"
+  },
+  "auth": {
+    "signInTitle": "Вход в Resume Builder",
+    "signInDescription": "Войдите с помощью своего аккаунта Google, чтобы получить доступ к созданию и редактированию резюме.",
+    "signInWithGoogle": "Войти с Google"
+  },
+  "resume": {
+    "sections": {
+      "personalInfo": "Личная информация",
+      "education": "Образование",
+      "experience": "Опыт работы",
+      "skills": "Навыки",
+      "languages": "Языки",
+      "interests": "Интересы и хобби"
+    },
+    "fields": {
+      "fullName": "Полное имя",
+      "email": "Email",
+      "phone": "Телефон",
+      "address": "Адрес",
+      "photoUrl": "URL фотографии",
+      "profession": "Профессия",
+      "summary": "Профессиональное резюме"
+    }
+  }
+}
