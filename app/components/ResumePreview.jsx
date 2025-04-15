@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import Button from '@/app/components/ui/Button';
 import TemplateSelector from '@/app/components/TemplateSelector';
 import StandardTemplate from '@/app/components/ResumeTemplates/StandardTemplate';
@@ -15,12 +15,10 @@ export default function ResumePreview({ resume, onUpdateTemplate, onUpdateTempla
     const [currentLanguage, setCurrentLanguage] = useState('ru');
 
     useEffect(() => {
-        // Получаем текущий язык из куки
         const savedLanguage = Cookies.get('selectedLanguage') || 'ru';
         setCurrentLanguage(savedLanguage);
     }, []);
 
-    // Функция перевода
     const t = (key, fallback = '') => getTranslation(currentLanguage, key, fallback);
 
     const handleExportPdf = async () => {
@@ -57,7 +55,6 @@ export default function ResumePreview({ resume, onUpdateTemplate, onUpdateTempla
         }
     };
 
-    // Проверка наличия данных для отображения
     const hasPersonalInfo = resume.personalInfo && (
         resume.personalInfo.fullName ||
         resume.personalInfo.email ||
@@ -72,7 +69,6 @@ export default function ResumePreview({ resume, onUpdateTemplate, onUpdateTempla
         (resume.languages && resume.languages.length > 0) ||
         (resume.interests && resume.interests.length > 0);
 
-    // Выбор компонента шаблона
     const renderTemplate = () => {
         const templateId = resume.template || 'standard';
 
@@ -100,7 +96,6 @@ export default function ResumePreview({ resume, onUpdateTemplate, onUpdateTempla
                 </Button>
             </div>
 
-            {/* Селектор шаблонов */}
             <TemplateSelector
                 resume={resume}
                 onSelect={handleSelectTemplate}

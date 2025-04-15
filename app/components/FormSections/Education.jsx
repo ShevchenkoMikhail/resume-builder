@@ -8,7 +8,6 @@ import Button from '@/app/components/ui/Button';
 export default function Education({ items, onChange }) {
     const [education, setEducation] = useState(items || []);
 
-    // Новый пустой элемент образования
     const emptyEducation = {
         institution: '',
         degree: '',
@@ -18,14 +17,12 @@ export default function Education({ items, onChange }) {
         description: ''
     };
 
-    // Добавить новое образование
     const addEducation = () => {
         const updatedEducation = [...education, { ...emptyEducation }];
         setEducation(updatedEducation);
         onChange(updatedEducation);
     };
 
-    // Удалить образование
     const removeEducation = (index) => {
         const updatedEducation = [...education];
         updatedEducation.splice(index, 1);
@@ -33,7 +30,6 @@ export default function Education({ items, onChange }) {
         onChange(updatedEducation);
     };
 
-    // Обновить данные об образовании
     const updateEducation = (index, field, value) => {
         const updatedEducation = [...education];
         updatedEducation[index] = {

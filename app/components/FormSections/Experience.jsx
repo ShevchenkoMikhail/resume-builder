@@ -8,7 +8,6 @@ import Button from '@/app/components/ui/Button';
 export default function Experience({ items, onChange }) {
     const [experience, setExperience] = useState(items || []);
 
-    // Новый пустой элемент опыта работы
     const emptyExperience = {
         company: '',
         position: '',
@@ -18,14 +17,12 @@ export default function Experience({ items, onChange }) {
         description: ''
     };
 
-    // Добавить новый опыт работы
     const addExperience = () => {
-        const updatedExperience = [...experience, { ...emptyExperience }];
-        setExperience(updatedExperience);
+        const updatedExperience = [...experience, {...emptyExperience}];
+        set
+        Experience(updatedExperience);
         onChange(updatedExperience);
     };
-
-    // Удалить опыт работы
     const removeExperience = (index) => {
         const updatedExperience = [...experience];
         updatedExperience.splice(index, 1);
@@ -33,7 +30,6 @@ export default function Experience({ items, onChange }) {
         onChange(updatedExperience);
     };
 
-    // Обновить данные об опыте работы
     const updateExperience = (index, field, value) => {
         const updatedExperience = [...experience];
         updatedExperience[index] = {

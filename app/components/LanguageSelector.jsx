@@ -7,9 +7,8 @@ import languages from '@/app/messages/languages';
 
 export default function LanguageSelector() {
     const router = useRouter();
-    const [currentLanguage, setCurrentLanguage] = useState('ru'); // По умолчанию русский
+    const [currentLanguage, setCurrentLanguage] = useState('ru');
 
-    // При монтировании компонента загружаем выбранный язык из куки
     useEffect(() => {
         const savedLanguage = Cookies.get('selectedLanguage') || 'ru';
         setCurrentLanguage(savedLanguage);
@@ -18,12 +17,8 @@ export default function LanguageSelector() {
     const handleLanguageChange = (e) => {
         const newLanguage = e.target.value;
         setCurrentLanguage(newLanguage);
-
-        // Сохраняем выбранный язык в куки для сохранения между сессиями
-        Cookies.set('selectedLanguage', newLanguage, { expires: 365 }); // Сохраняем на год
-
-        // Перезагрузка страницы для применения изменений
-        window.location.reload();
+        Cookies.set('selectedLanguage', newLanguage, { expires: 365 });
+        router.refresh();
     };
 
     return (

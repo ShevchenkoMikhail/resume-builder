@@ -10,7 +10,6 @@ import Languages from '@/app/components/FormSections/Languages';
 import Interests from '@/app/components/FormSections/Interests';
 
 export default function ResumeForm({ initialData = {}, onUpdate, onSave }) {
-    // Инициализация данных формы
     const [formData, setFormData] = useState({
         personalInfo: initialData.personalInfo || {
             fullName: '',
@@ -28,12 +27,10 @@ export default function ResumeForm({ initialData = {}, onUpdate, onSave }) {
         interests: initialData.interests || [],
     });
 
-    // Состояние сохранения
     const [isSaving, setIsSaving] = useState(false);
     const [saveError, setSaveError] = useState(null);
     const [saveSuccess, setSaveSuccess] = useState(false);
 
-    // Обработка изменений в разделах формы
     const handlePersonalInfoChange = (personalInfo) => {
         const updatedData = { ...formData, personalInfo };
         setFormData(updatedData);
@@ -70,7 +67,6 @@ export default function ResumeForm({ initialData = {}, onUpdate, onSave }) {
         onUpdate(updatedData);
     };
 
-    // Сохранение резюме
     const handleSave = async () => {
         setIsSaving(true);
         setSaveError(null);
@@ -79,7 +75,6 @@ export default function ResumeForm({ initialData = {}, onUpdate, onSave }) {
         try {
             await onSave(formData);
             setSaveSuccess(true);
-            // Сбросить сообщение об успехе через 3 секунды
             setTimeout(() => setSaveSuccess(false), 3000);
         } catch (error) {
             console.error('Ошибка сохранения резюме:', error);
@@ -89,7 +84,6 @@ export default function ResumeForm({ initialData = {}, onUpdate, onSave }) {
         }
     };
 
-    // Проверка на заполнение обязательных полей
     const isFormValid = formData.personalInfo.fullName && formData.personalInfo.email;
 
     return (
